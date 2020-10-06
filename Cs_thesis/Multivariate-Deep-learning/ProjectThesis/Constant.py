@@ -1,0 +1,7 @@
+FIELD_NIR = "nir"
+FIELD_MODEL = "model"
+FIELD_DATA_FILE = "dataFile"
+FIELD_MODEL_FILE = "modelFile"
+FIELD_WEIGHT_FILE = "weightFile"
+FIELD_MODEL_NAME = "modelName"
+FIELD_MODEL_TYPE = "modelType"

@@ -1,0 +1,1 @@
+web: gunicorn BananaRegression.wsgi --log-file -

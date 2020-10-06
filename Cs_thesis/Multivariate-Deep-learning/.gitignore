@@ -1,0 +1,15 @@
+*.xml
+*.jpg
+.vscode
+__init__*.py
+*.pyc
+main/media/*
+.idea/workspace.xml
+.idea/*
+.idea*
+out
+.idea
+*.ipr
+*.iws
+*.iml
+atlassian-ide-plugin.xml
