@@ -3,7 +3,6 @@
 #include <SocketIOClient.h>
 #include <SerialCommand.h>
  
-//include thư viện để kiểm tra free RAM trên con esp8266
 extern "C" {
   #include "user_interface.h"
 }
@@ -27,12 +26,12 @@ const byte TX = D2;
 SoftwareSerial mySerial(RX, TX, false, 256); 
 
 SocketIOClient client;
-const char* ssid = "A3.2.2.18";          //Tên mạng Wifi mà Socket server của bạn đang kết nối
-const char* password = "a32152001";  //Pass mạng wifi ahihi, anh em rãnh thì share pass cho mình với.
+const char* ssid = "A3.2.2.18";          //Wifi name
+const char* password = "a32152001";  //Password
  
-char host[] = "192.168.1.7";  //Địa chỉ IP dịch vụ, hãy thay đổi nó theo địa chỉ IP Socket server của bạn.
-int port = 3484;                  //Cổng dịch vụ socket server do chúng ta tạo!
-char namespace_esp8266[] = "esp8266";   //Thêm Arduino!
+char host[] = "192.168.1.7";  //Your IP address
+int port = 3484;                  //Default
+char namespace_esp8266[] = "esp8266";   
  
 //từ khóa extern: dùng để #include các biến toàn cục ở một số thư viện khác. Trong thư viện SocketIOClient có hai biến toàn cục
 // mà chúng ta cần quan tâm đó là
@@ -185,36 +184,39 @@ void setup()
     digitalWrite(WHITE_LED, 0);
     digitalWrite(LASER_404, 0);
   
-    digitalWrite(SPEC_CLK, HIGH); // Set SPEC_CLK High
-    digitalWrite(SPEC_ST, LOW); // Set SPEC_ST Low
-    //Bật baudrate ở mức 57600 để giao tiếp với máy tính qua Serial
+    digitalWrite(SPEC_CLK, HIGH); 
+    digitalWrite(SPEC_ST, LOW); 
+
+    
+    
+    
     Serial.begin(115200);
     mySerial.begin(115200); 
     delay(2000);
-    Serial.println("Doi");
+    Serial.println("Wifi setup");
     
  
-    Serial.print("Ket noi vao mang ");
+    Serial.print("Connect to:");
     Serial.println(ssid);
  
-    //Kết nối vào mạng Wifi
+    //Connecting to wifi
     WiFi.begin(ssid, password);
  
-    //Chờ đến khi đã được kết nối
-    while (WiFi.status() != WL_CONNECTED) { //Thoát ra khỏi vòng 
+    //Waiting for my love
+    while (WiFi.status() != WL_CONNECTED) { 
         delay(500);
         Serial.print('.');
     }
  
     Serial.println();
-    Serial.println(F("Da ket noi WiFi"));
-    Serial.println(F("Di chi IP cua ESP8266 (Socket Client ESP8266): "));
+    Serial.println(F("Wifi connected!!!"));
+    Serial.println(F("ESP8266 IP ADRESS (Socket Client ESP8266): "));
     Serial.println(WiFi.localIP());
-    Serial.println("San sang nhan lenh");
     client.connect(host, port, namespace_esp8266);
     if (client.connected()){
-      Serial.println("Dit con ba gia m");
-      client.send("hello","baby");
+      Serial.println("Socket server connected");
+      Serial.println("Ayyo!!!!!! Project Mangoooo");
+      client.send("hello","baby","Mango is back");
     }
  
     
@@ -222,10 +224,20 @@ void setup()
  
 void loop()
 {
-    
-    //Khi bắt được bất kỳ sự kiện nào thì chúng ta có hai tham số:
-    //  +RID: Tên sự kiện
-    //  +RFull: Danh sách tham số được nén thành chuỗi JSON!
+
+       if (client.connected()== false) 
+       {
+        Serial.println("Reconnecting....Please wait");
+        client.connect(host, port, namespace_esp8266);
+        while (client.connected()==false)
+        {
+          Serial.print('.');
+        }
+        Serial.println("Done. Welcome back:>");
+        client.send("Let","kill","I'm back");
+        }
+
+
     if (client.monitor()) {
         if (RID == "getData") {
           pinMode(SPEC_CLK, OUTPUT);
@@ -257,12 +269,9 @@ void loop()
         //in ra serial monitor
         Serial.print(RID);
         Serial.print(' ');
-        Serial.println(Rfull);
-    
+        Serial.println(Rfull);  
+        
     }
  
-    //Kết nối lại!
-    if (!client.connected()) {
-      client.connect(host, port, namespace_esp8266);
-    }
+    
 }
