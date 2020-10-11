@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My App</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- Only required for desktop -->
+		<link rel="stylesheet" href="/dist/css/mobile-angular-ui-hover.min.css" />
+		<!-- Always required -->
+		<link rel="stylesheet" href="/dist/css/mobile-angular-ui-base.min.css" />
+		<!-- Only required for desktop -->
+		<link rel="stylesheet" href="/dist/css/mobile-angular-ui-desktop.min.css" />
+		<script src="/angular.min.js"></script>
+		<script src="/angular-route.min.js"></script>
+		<script src="/dist/js/mobile-angular-ui.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/socket.min.js"></script>
+		<script src="/webapp.js"></script>
+		<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script src="https://cdn.zingchart.com/angular/zingchart-angularjs.js"> </script>
+    <script src="/angular-resource.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	</head>
+	<body ng-app="myApp">
+		<div class="app">
+			<div class="navbar navbar-app navbar-absolute-top">
+				<!-- Top Navbar -->
+			</div>
+			<!-- App body -->
+			<div class='app-body'>
+				<div class='app-content'>
+					<ng-view>
+					</ng-view>
+				</div>
+			</div>
+		</div>
+		<!-- ~ .app -->
+		<!-- Modals and Overlays -->
+		<div ui-yield-to="modals"></div>
+	</body>
+</html>

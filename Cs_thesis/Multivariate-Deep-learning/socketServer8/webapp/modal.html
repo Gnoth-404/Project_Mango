@@ -1,0 +1,41 @@
+<div class="modal-header">
+  <h3>Insert new model</h3>
+</div>
+<div class="modal-body">
+  <form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="modelName">Insert model name:</label>
+      <input type="text" class="form-control" ng-model="modelName" aria-describedby="nameHelp" placeholder="Insert model name">
+      <small id="nameHelp" class="form-text text-muted">Insert your model name</small>
+    </div>
+    <div class="form-group">
+      <label for="modelType">Select model type:</label>
+      <br>
+      <select name="singleSelect" id="singleSelect" ng-model="modelType">
+           <option value="">---Please select---</option> <!-- not selected / blank option -->
+           <option value="regression">Regression</option>
+           <option value="classification">Classification</option>
+         </select><br>
+     <small id="typeHelp" class="form-text text-muted">Select your model type</small>
+    </div>
+  <div class="form-group">
+    <label for="dataFile">Data file upload:</label>
+    <input type="file" class="form-control" id="dataFile" aria-describedby="dataHelp" placeholder="Upload data file" accept=".csv">
+    <small id="dataHelp" class="form-text text-muted">Upload your .csv data file</small>
+  </div>
+  <div class="form-group">
+    <label for="modelFile">Model file upload</label>
+    <input type="file" class="form-control" id="modelFile" aria-describedby="modelHelp" placeholder="Upload model file" accept=".json">
+    <small id="modelHelp" class="form-text text-muted">Upload your .json model file</small>
+  </div>
+  <div class="form-group">
+    <label for="weightFile">Weights file upload</label>
+    <input type="file" class="form-control" id="weightFile" aria-describedby="weightHelp" placeholder="Upload weight file" accept=".h5">
+    <small id="weightHelp" class="form-text text-muted">Upload your .h5 weight file</small>
+  </div>
+</form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="import()" onclick="this.disabled=true">Import</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

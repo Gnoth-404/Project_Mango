@@ -1,0 +1,63 @@
+<div class="scrollable">
+	<div class="scrollable-content">
+		<div class="list-group text-center">
+			<!-- cục giới thiệu -->
+			<div class="list-group-item list-group-item-home">
+				<h1>PROJECT MANGO <small>Gnoth_404</small>
+				</h1
+				<h3 class="home-heading">SENSOR STATE</h3>
+					<div>
+						SENSOR is {{connection_status.value}}.
+					</div>
+			</div>
+
+
+			<div class="list-group-item list-group-item-home">
+				<div>
+					<i class="fa fa-gamepad feature-icon text-primary"></i>
+				</div>
+				<div>
+						<button class="button" ng-click="getData()"> Get Spectrum Data </button>
+						<input type="hidden" name="spectrum" ng-model="spectrum">
+						<zingchart id="spectrumGraph" zc-values="spectrumGraphData"
+						zc-height=500 zc-width="100%" style="display:block;"
+						zc-json="graphJson"> </zingchart>
+				</div>
+			</div>
+			<!-- Data collection dev mode -->
+			<div class="ng-hide">
+				<div>
+					<i class="fa fa-gamepad feature-icon text-primary"></i>
+				</div>
+				<div>
+					<textarea rows="200" cols="5000" id="myTextarea"></textarea>
+
+				</div>
+			</div>
+
+			<div class="list-group-item list-group-item-home">
+				<div>
+					<i class="fa fa-gamepad feature-icon text-primary"></i>
+				</div>
+				<div>
+					<h3 class="home-heading">Test api request response</h3>
+					<form name="myForm">
+    				<label for="repeatSelect"> Select model: </label>
+    				<select name="repeatSelect" id="repeatSelect" ng-model="selectableModels.model" ng-change="first = true">
+      				<option ng-repeat="option in selectableModels.availableOptions" value="{{option.name}}">{{option.name}}</option>
+    					</select>
+      				<button class="btn btn-info btn-sm" ng-click="open()" style="margin: 15px;">Add model</button>
+							<div class="input-group col-lg-5 col-lg-offset-4">
+		  				<span class="input-group-btn">
+								<button class="btn btn-default" ng-disabled="first !== true"
+								ng-click="NeuralNetworkprediction()"> Neural Network </button>
+							</span>
+								<input type="text" name="Text" class="form-control w-50" ng-model="result" disabled="disabled">
+							</div>
+  				</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
