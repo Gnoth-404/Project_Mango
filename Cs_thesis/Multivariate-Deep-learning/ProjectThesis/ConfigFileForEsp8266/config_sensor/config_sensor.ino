@@ -225,11 +225,11 @@ void setup()
 void loop()
 {
 
-       if (client.connected()== false) 
+       if (!client.connected()) 
        {
         Serial.println("Reconnecting....Please wait");
         client.connect(host, port, namespace_esp8266);
-        while (client.connected()==false)
+        while (!client.connected())
         {
           Serial.print('.');
         }
