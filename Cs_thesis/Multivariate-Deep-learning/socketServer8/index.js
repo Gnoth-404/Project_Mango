@@ -18,8 +18,8 @@ esp8266_nsp.use(middleware);									//Khi esp8266 emit bất kỳ lệnh gì l�
 webapp_nsp.use(middleware);									//Khi webapp emit bất kỳ lệnh gì lên thì sẽ bị bắt
 
 server.listen(PORT);										// Cho socket server (chương trình mạng) lắng nghe ở port 3484
-console.log("Server nodejs chay tai dia chi: " + ip.address() + ":" + PORT)
-
+console.log("Nodejs server is running at: " + ip.address() + ":" + PORT)
+console.log("Get ready")
 //Cài đặt webapp các fie dữ liệu tĩnh
 app.use(express.static("node_modules/mobile-angular-ui"))
 app.use(express.static("node_modules/angular"))
@@ -60,7 +60,7 @@ esp8266_nsp.on('connection', function(socket) {
 
 	//nhận được bất cứ lệnh nào
 	socket.on("*", function(packet) {
-		console.log("esp8266 rev and send to webapp packet: ", packet.data[1]) //in ra để debug
+		console.log("Esp8266 rev and send to webapp packet: ", packet.data[1]) //in ra để debug
 		var eventName = packet.data[0]
 		var eventJson = packet.data[1] || {} //nếu gửi thêm json thì lấy json từ lệnh gửi, không thì gửi chuỗi json rỗng, {}
 		webapp_nsp.emit(eventName, CreateJson(packet.data[1])) //gửi toàn bộ lệnh + json đến webapp
