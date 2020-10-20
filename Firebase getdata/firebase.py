@@ -51,4 +51,4 @@ snapshot = ref.get()
 
 with open('test.csv', 'w') as outfile:
     for key in snapshot.keys():
-        outfile.write("%s,%s\n"%(key[2::],snapshot[key]))
+        outfile.write("{},{}\n".format(key[2::],snapshot[key]))
