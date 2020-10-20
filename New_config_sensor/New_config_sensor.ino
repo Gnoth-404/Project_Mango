@@ -293,7 +293,7 @@ void loop()
     delay(10);
 if (millis() - previousMillis > interval) {
     previousMillis = millis();
-    client.send("DHT-Humidity", "Humidity", "123465");
+    client.send("Hello", "World", "123456");
 };
 
 

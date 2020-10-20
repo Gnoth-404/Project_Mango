@@ -46,17 +46,9 @@ sample_Data_ref.set(dict(sample1={
 
 # retrieve data
 ref = db.reference('data')
-snapshot = ref.order_by_key().get()
-print(snapshot)
-print(type(snapshot))
+snapshot = ref.get()
 
-keys, values = [], []
 
-for key, value in snapshot.items():
-    keys.append(key)
-    values.append(value)
-
-with open("frequencies.csv", "w") as outfile:
-    csvwriter = csv.writer(outfile)
-    csvwriter.writerow(keys)
-    csvwriter.writerow(values)
+with open('test.csv', 'w') as outfile:
+    for key in snapshot.keys():
+        outfile.write("%s,%s\n"%(key[2::],snapshot[key]))
