@@ -5,7 +5,7 @@
 #include <FirebaseHttpClient.h>
 #include <FirebaseObject.h>
 
-#define FIREBASE_HOST "fruit-classification-57e9d.firebaseio.com"
+#define FIREBASE_HOST "fruitapp-vgu2020.firebaseio.com"
 #define FIREBASE_AUTH ""
 #define WIFI_SSID "A3.2.2.18"   //Thay wifi và mật khẩu
 #define WIFI_PASSWORD "a32152001"
@@ -39,7 +39,7 @@ int interval=100;
 int previousMillis;
 
 SocketIOClient client;
-const char* ssid = "";  //Wifi name
+const char* ssid = "A3.2.2.18";  //Wifi name
 const char* password = "a32152001";  //Password
  
 char host[] = "vguprojectmango.herokuapp.com";  //Your IP address
@@ -271,7 +271,8 @@ void loop()
           digitalWrite(WHITE_LED, 0);
 
           // Upload data to Firebase
-          Firebase.pushString("data", dataResult);
+          Firebase.pushString("Storage", dataResult);
+          Firebase.setString("Realtime",dataResult);
 
             // handle error
             if (Firebase.failed()) {
