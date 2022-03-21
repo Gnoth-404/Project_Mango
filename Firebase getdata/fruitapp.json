@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fruitapp-vgu2020",
+  "private_key_id": "344565c74d81867c45529d3fcb9f8770f870023f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCWZN5yiaz47dcH\nzEZTwOS/Wyn79kAgsqZK0/O6wdRikSxRgCv0MuO67CvqeE5/3+U28kfvvjBQigfo\ndATvVCSmBc90U9oPISmJZRJGUku5XK1uWDsOYEVkQRsMwcBEutSQSAkI+uVPQFRK\nNEQXUzIfHUca7mTFqpDfsgi43MMSr9GCk2UAQUw+/pxM+G/Z07HWAuVcHaSmrd7S\nnML0f/dZnmuI4G1rFtvA8447zs6esGXx6OKxz7FO5Ubiaqen7JS7wkiBzVe6ZMPU\nuq6XseuhcY+z9xSiwlQsDjsZKhz89czC1RSDwyLxjC748uXg12OspNlY+3eB9Ohi\nxz7L28LDAgMBAAECggEABNdDV8F5uVuCf+RB4UFEu6oWDF+tScAmXSM8ZacGjJOq\nrwbmo0oeDW67rSTpNfGBgcbDrQJcsML4pTFS1VdKhLOMLWzjiHgjS6Jet7e/azyB\n8prRb9GGekckNUFpTG0NGYXQEKNuzSG/dNIA3RVW+CxrlQDWaoxmdGTZJgYpG0lT\n3PsD6MFBLP4kV4I9VkNHWJAy7+AZb4krKMtSJnj//boITDPCkvUTve0iFigj/XKf\nmYj81s3xuq0Ud2HTp/+7GqkNPH75T2Y9oPLp5N1ju7l9WILxEqBa8R1D87uQnA8j\nxXv4BMpeE4sYzSZkYsXZ/Kb0Cx7C3zvD3hiqWqB+oQKBgQDIz2HndvomBDKo97Cr\nGaR6zprvSljKBAIHL9+Fn/NlTjofL3uxc8/WMSb1niHhE/u8xG57lzcCAOzYI9Y5\neEEHrfrI6bIhueEuHPfUQCGsQHGNYOMMjnEgfVMVuoCOARSzzQo3396IpMbCsPLa\n0V97l9elZVTTE7Z1/zssF5lzIwKBgQC/uk6wmB/HHg63XXZEPBMbnyfyLU/zYCfY\nICmtfPE9T4e7LeFkzly4YQgenkE08u/BXm9A12RBR+0CA6gGU6pyP1WO0YrxRPPV\n5FqwIxp1u4Efgqzt+sfRoXplBWcyMT7dipsrL8Tx7finaYgUJF+amFvFsO3Rg9Qg\nfZLviUG74QKBgHxdU3kSimG4/9b9b4DH5MHZ6sJ//PU//jGNSJVtNkRrajueILEJ\n1JIG5uX/BWRsB+Akl3gbconfIM/LggUdoMisy0Ba22Nfx0HT1viwryoKz0iL1JIW\nNaG1fBtc4fkQWk3wkn+AOkXOJvq0s/Mo8EWPCJL6aso+zyXM6EyqYPKZAoGAKS3e\n0NcbnCy8hG2yhR1SDVC1x7Irxd4VMLpXuUdomP6H7JACJSCdkYxlrg3Xe4PiMuoR\ngx/ADLViFliqshEuPrOTsMUYzpE8vef6AnLHsBnBtf7fHY4LdN715tSuQX2KPxMS\nGMh9yGiQS4TDEXBuiEnJDEDgE2v5F7Fg6cnVMIECgYAHbAvXEKNlVhHGtQNq49iV\nITydJyPmyC4flRPFNI25kzm+422hAsbO+cB2fJrhWdX0Em187Dj1S5nKpDFp1OCS\npn53FTs8w1C5cGBvZAGrLgoXLyGKHCYh5+gu4Ad9aVM5BRP66nUp6QN6B9GCh+t5\n3EM8G5tbgbjOuCEEs/e8kA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-nif6l@fruitapp-vgu2020.iam.gserviceaccount.com",
+  "client_id": "109410101001859264371",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-nif6l%40fruitapp-vgu2020.iam.gserviceaccount.com"
+}

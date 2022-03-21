@@ -1,0 +1,250 @@
+{
+  "lastEdited": {
+    "seconds": 1609775258,
+    "nanos": 0
+  },
+  "codeOptions": {
+    "applicationUUID": "e11790b2-d1bd-452a-94fd-425d4b909359",
+    "applicationName": "FruitScreen",
+    "lastInputUuid": "6dd87e7d-e751-4912-a70d-91793b1d3d87",
+    "lastDisplayUuid": "fd998437-c4b2-4386-ba88-d0ae7c20620b",
+    "lastRemoteUuid": "2c101fec-1f7d-4ff3-8d2b-992ad41e7fcb",
+    "embeddedPlatform": "ARDUINO_ESP32",
+    "namingRecursive": true,
+    "saveToSrc": true,
+    "useCppMain": false,
+    "lastProperties": [
+      {
+        "name": "PULLUP_LOGIC",
+        "latestValue": "true",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "INTERRUPT_SWITCHES",
+        "latestValue": "false",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "SWITCH_IODEVICE",
+        "latestValue": "",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_PIN_A",
+        "latestValue": "33",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_PIN_B",
+        "latestValue": "34",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "ENCODER_PIN_OK",
+        "latestValue": "32",
+        "subsystem": "INPUT"
+      },
+      {
+        "name": "DISPLAY_VARIABLE",
+        "latestValue": "Config",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DISPLAY_TYPE",
+        "latestValue": "U8G2_SH1106_128X64_NONAME_F_HW_I2C",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DISPLAY_ROTATION",
+        "latestValue": "U8G2_R0",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DISPLAY_CLOCK_PIN",
+        "latestValue": "U8X8_PIN_NONE",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DISPLAY_DATA_PIN",
+        "latestValue": "U8X8_PIN_NONE",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DISPLAY_RESET_PIN",
+        "latestValue": "U8X8_PIN_NONE",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DISPLAY_CS_PIN",
+        "latestValue": "U8X8_PIN_NONE",
+        "subsystem": "DISPLAY"
+      },
+      {
+        "name": "DISPLAY_RS_PIN",
+        "latestValue": "U8X8_PIN_NONE",
+        "subsystem": "DISPLAY"
+      }
+    ]
+  },
+  "projectName": "An Oled screen developed by Gnoth404",
+  "namingRecursive": true,
+  "version": "1.0",
+  "items": [
+    {
+      "parentId": 0,
+      "type": "subMenu",
+      "item": {
+        "name": "ONLINE MODE",
+        "eepromAddress": -1,
+        "id": 1,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "secured": false
+      }
+    },
+    {
+      "parentId": 1,
+      "type": "subMenu",
+      "item": {
+        "name": "Spectrometer",
+        "eepromAddress": -1,
+        "id": 3,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "secured": false
+      }
+    },
+    {
+      "parentId": 3,
+      "type": "actionMenu",
+      "item": {
+        "name": "GetData",
+        "eepromAddress": -1,
+        "id": 11,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "readspectrometer"
+      }
+    },
+    {
+      "parentId": 3,
+      "type": "actionMenu",
+      "item": {
+        "name": "CalibrateLED",
+        "eepromAddress": -1,
+        "id": 12,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true
+      }
+    },
+    {
+      "parentId": 1,
+      "type": "textItem",
+      "item": {
+        "name": "Firebase_Name ",
+        "eepromAddress": 2,
+        "id": 8,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "itemType": "PLAIN_TEXT",
+        "textLength": 20
+      }
+    },
+    {
+      "parentId": 1,
+      "type": "subMenu",
+      "item": {
+        "name": "Settings",
+        "eepromAddress": -1,
+        "id": 7,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "secured": false
+      }
+    },
+    {
+      "parentId": 7,
+      "type": "actionMenu",
+      "item": {
+        "name": "Wifi",
+        "eepromAddress": -1,
+        "id": 9,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "WifiConnection"
+      }
+    },
+    {
+      "parentId": 7,
+      "type": "actionMenu",
+      "item": {
+        "name": "Firebase",
+        "eepromAddress": -1,
+        "id": 10,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "FirebaseData"
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "subMenu",
+      "item": {
+        "name": "OFFLINE MODE",
+        "eepromAddress": -1,
+        "id": 2,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "secured": false
+      }
+    },
+    {
+      "parentId": 2,
+      "type": "actionMenu",
+      "item": {
+        "name": "GetData",
+        "eepromAddress": -1,
+        "id": 13,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "readSpectroOffline"
+      }
+    },
+    {
+      "parentId": 2,
+      "type": "actionMenu",
+      "item": {
+        "name": "DownloadData",
+        "eepromAddress": -1,
+        "id": 14,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "functionName": "OpenPortal"
+      }
+    },
+    {
+      "parentId": 0,
+      "type": "floatItem",
+      "item": {
+        "name": "Battery Level",
+        "eepromAddress": -1,
+        "id": 6,
+        "readOnly": false,
+        "localOnly": false,
+        "visible": true,
+        "numDecimalPlaces": 2
+      }
+    }
+  ]
+}

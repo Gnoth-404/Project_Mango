@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ESP 32 WIFI LOGIN</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+<!--Symbol-->
+	<link rel="stylesheet" type="text/css" href="icon.css">
+<!--Style===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="main.css">
+<!--===============================================================================================-->
+
+
+</head>
+
+
+
+
+
+<body>
+	<!--Set margin-->
+	<div class="limiter">
+		<!--Big Container-->
+		
+
+		<div class="container-login100">
+			<!--Absolute-->
+
+			<div class="wrap-login100">
+				<!--Topbar-->
+				<div class="topbar">
+					<ul class="tabs-menu">
+						<li class="TabLink Current">
+							<a href="#Tab-1">
+								<span class="icon"><i class="zmdi zmdi-home"></i></span>
+							</a>
+						</li> 
+						<li class="TabLink">
+							<a href="#Tab-2">
+								<span class="icon"><i class="zmdi zmdi-settings"></i></span>
+							</a>	
+						</li> 
+		
+						<li class="TabLink Special">
+							<a href="#Tab-3">
+								<span class="icon"><i class="zmdi zmdi-cloud-download"></i></span>
+							</a>
+						</li>
+						<!--Restarting request-->
+						<li class="TabLink">
+							<a href="#Restart">
+								<span class="icon"><i class="zmdi zmdi-power-setting"></i></span>
+							</a>
+									
+						</li> 	
+					</ul>			
+				</div>
+				<!--Login Form-->
+				<div class="TabContent" id="Tab-1">
+					<form class="login100-form validate-form" id="LoginForm" action="/saveSecret/" method="POST">
+						<!--Wifi title-->
+						<span class="login100-form-title Header">
+							WIFI LOGIN
+						</span>
+						<!--Wifi icon-->
+						<span class="login100-form-title Icon">
+							<i class="zmdi zmdi-wifi-alt"></i>
+						</span>
+						<!--==========================================================================================-->
+						<label class="switch">
+
+							<input type="checkbox" checked>
+							<div class="slider round"></div>
+							<span class="label">
+								WIFI
+								<i class="zmdi zmdi-account-box-o"></i>
+							</span>
+						</label>
+						<!--Wifi setting-->
+						<div id="wifi-credential">
+							<div include="form-input-select()">
+								<select name="SSID">
+									<option value="" hidden>SSID</option>
+								</select>
+							</div>
+	
+							<!--==============================================================================================-->
+							<div class="wrap-input100 validate-input" data-validate="Enter password">
+								<span class="btn-show-pass"><i class="zmdi zmdi-eye"></i></span>
+								<input class="input100 passwordinput" type="password" name="pass">
+								<span class="focus-input100" data-placeholder="Password"></span>
+							</div>
+
+
+						</div>
+
+
+						<!--Firebase-->
+						<div class="wrap-input100 validate-input">
+							<input class="input100" type="text" name="Firebase">
+							<span class="focus-input100" data-placeholder="Firebase" ></span>
+						</div>
+						<!--========================================================================-->
+						<!--Login Button-->
+						<div class="container-login100-form-btn">
+							<div class="wrap-login100-form-btn">
+								<div class="login100-form-bgbtn"></div>
+								<button class="login100-form-btn">
+									SUBMIT
+								</button>
+							</div>
+						</div>
+						
+					</form>
+				</div>
+				<!--Wifi manager form-->
+				<div class="TabContent" id="Tab-2">
+					<span class="login100-form-title Header">
+						WIFI MANAGER
+					</span>
+						<!--Settings-->
+					<span class="login100-form-title Icon">
+						<i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+					</span>
+						<!--=================================-->
+						<!--Wifi data-->	
+					<table class="content-table" id="wifi-table">
+						<thead>
+								<tr>
+									<th></th>
+									<th>SSID</th>
+									<th>PASSWORD</th>
+									<th></th>
+								</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>	
+
+					<div class="container-login100-form-btn">
+							<div class="wrap-login100-form-btn">
+								<div class="login100-form-bgbtn"></div>
+									<button class="login100-form-btn">
+										SAVE
+									</button>
+							</div>
+					</div>
+
+				</div>
+				<!--Download data form(New Page)-->
+				<!--Restart data form-->
+				<div class="TabContent" id="Tab-3">
+					<div id="wifilist">
+						<span>Test</span>
+					</div>
+				</div>
+				<div class="TabContent" id="Tab-4">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<script src="jquery.min.js"></script>
+
+	<script src="main.js"></script>
+
+</body>
+</html>
